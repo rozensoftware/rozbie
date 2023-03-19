@@ -12,7 +12,7 @@ The presented soluction consists of two project:
 1. Rozbie malware written in Rust. It is a program that must to be run in the target system to give an intruder an access to system's command line.
 2. Rozbie Farm is a server in which you can execute commands to run on remote, infected with Rozbie computers.
 
-![Rozbie Farm](https://github.com/rozensoftware/rozbie/blob/master/RozbieFarm.png)
+![Rozbie Farm](https://github.com/rozensoftware/rozbie/blob/master/RozbieFarm.jpg)
 
 ## Installation
 
