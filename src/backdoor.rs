@@ -109,6 +109,12 @@ impl Backdoor
         str_slice
     }
 
+    /// This function will check if the user sent a special command
+    /// # Arguments
+    /// * `cmd` - The command to check
+    /// # Returns
+    /// True if the user sent a special command to close the program
+    /// False if the user did not send a special command to close the program
     fn run_special_cmd(&self, cmd: &String) -> bool
     {
         let mut quit = false;
