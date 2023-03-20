@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RozbieFarm"
         mc:Ignorable="d"
-        Title="Rozbie Farm Monitor" Height="502" Width="800" Closed="Window_Closed" ResizeMode="NoResize" Icon="/Resources/rozbiefarm.ico">
+        Title="Rozbie Farm Monitor" Height="502" Width="800" Closed="Window_Closed" ResizeMode="CanMinimize" Icon="/Resources/rozbiefarm.ico">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="780" />

