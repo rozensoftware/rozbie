@@ -9,8 +9,8 @@ The Rozbie works only on Windows OS.
 
 The presented soluction consists of two project:
 
-1. Rozbie malware written in Rust. It is a program that must to be run in the target system to give an intruder an access to the system's command line console.
-2. Rozbie Farm is a server in which you can execute commands to run on remote, infected with Rozbie computers.
+1. Rozbie malware written in Rust. It is a program that must be run in the target system to give an intruder an access to the system's command line console.
+2. Rozbie Farm is a server in which you can execute commands to run on infected with Rozbie computers.
 
 ![Rozbie Farm](https://github.com/rozensoftware/rozbie/blob/master/RozbieFarm.jpg)
 
@@ -46,7 +46,7 @@ There is a special command that can be executed only by the Rozbie:
 It's better to type first: 'cd ..' to change directory to one level up instead of 'dir'. There is a static buffer which can hold up to 1MB of data only.
 You can chage it to a bigger value of course. It is something to address in future commits but as long as it is just a small vicious program, some optimizations are missing now.
 
-## Disclamer
+## Disclaimer
 
 The author of this code is not responsible for the incorrect operation of the presented code and/or for its incorrect use. The code presented in this project is intended to serve only to learn programming.
 
